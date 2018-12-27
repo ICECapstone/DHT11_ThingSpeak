@@ -11,4 +11,4 @@ In this lecture, you will set up a new ThingSpeak channel and upload temperature
 3. Upload the code to NodeMCU
 4. Observe how real-time data are updated on ThingSpeak
 
-
+![screen shot 2018-12-27 at 7 49 30 am](https://user-images.githubusercontent.com/11530521/50461029-caec8080-09ad-11e9-9bd7-2813d5c23998.png)
