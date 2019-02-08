@@ -1,4 +1,4 @@
-# Lecture2a_ThingSpeak
+# DHT11_ThingSpeak
 
 In this lecture, you will set up a new ThingSpeak channel and upload temperature and humidity readings from DHT11 in real time.
 
