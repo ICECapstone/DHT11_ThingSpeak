@@ -34,10 +34,7 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  //Serial.println(millis() % 20000);
-  if (millis() % 20000 < 1000) 
-  {
+  // put your main code here, to run repeatedly: 
     float t = dht.readTemperature();
     float h = dht.readHumidity();
     
@@ -54,6 +51,6 @@ void loop() {
       ThingSpeak.setField(1, t);
       ThingSpeak.setField(2, h);
       ThingSpeak.writeFields(myChannelNumber, myWriteAPIKey);
-   }
+    delay(20000);
   }
 }
