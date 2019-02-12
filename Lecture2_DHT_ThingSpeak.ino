@@ -35,22 +35,25 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  float t = dht.readTemperature();
-  float h = dht.readHumidity();
-  
-  Serial.print("Temperature: ");
-  Serial.print(t);
-  Serial.println(" *C ");
-  Serial.print("Humidity: ");
-  Serial.print(h);
-  Serial.println(" % ");
-  
-  Serial.println("....writing to Thingspeak...");
-  if (client.connect(server, 80)) {
-    Serial.println("Connected to thingspeak");
-    ThingSpeak.setField(1, t);
-    ThingSpeak.setField(2, h);
-    ThingSpeak.writeFields(myChannelNumber, myWriteAPIKey);
-    delay(20000);
+  //Serial.println(millis() % 20000);
+  if (millis() % 20000 < 1000) 
+  {
+    float t = dht.readTemperature();
+    float h = dht.readHumidity();
+    
+    Serial.print("Temperature: ");
+    Serial.print(t);
+    Serial.println(" *C ");
+    Serial.print("Humidity: ");
+    Serial.print(h);
+    Serial.println(" % ");
+    
+    Serial.println("....writing to Thingspeak...");
+    if (client.connect(server, 80)) {
+      Serial.println("Connected to thingspeak");
+      ThingSpeak.setField(1, t);
+      ThingSpeak.setField(2, h);
+      ThingSpeak.writeFields(myChannelNumber, myWriteAPIKey);
+   }
   }
 }
