@@ -9,7 +9,7 @@ DHT dht(DHTPIN, DHTTYPE);
 const char* ssid = "add_your_WiFi_ssid";
 const char* password = "add_your_WiFi_password";
 const char * myWriteAPIKey = "add_your_thingspeak_writeAPIkey";
-unsigned long myChannelNumber = 662651; //add your thingspeak channel number
+unsigned long myChannelNumber = 111111; //add your thingspeak channel number
 const char* server = "api.thingspeak.com";
 WiFiClient client;
 
